@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+const config = require('../../../next.config.js');
 export default function Projects() {
   const projects = [
     {
@@ -7,7 +8,7 @@ export default function Projects() {
       title: "Business Finance Tracker",
       description: " Developed a web app to track the finances of various publicly traded companies, such as Pfizer, and used a Large Language Model to analyze the effects of the COVID-19 pandemic on the company.",
       technologies: ["Python", "HTML", "CSS", "JavaScript", "Pandas"],
-      image: "/images/businessfinancetracker.jpg",
+      image: config.basePath + "/images/businessfinancetracker.jpg",
       github: "https://github.com/VishVarm/10KAnalyzer",
     },
     {
@@ -15,7 +16,7 @@ export default function Projects() {
       title: "The Community Restoration Project Website",
       description: "Developed a website for the Community Restoration Project (CRP) in the Morgan Stanley Hackathon.",
       technologies: ["ReactJS", "TypeScript", "Firebase", "Python"],
-      image: "/images/crp.png",
+      image: config.basePath + "/images/crp.png",
       github: "https://github.com/vireshpati/MS-C2G2024-TCRP-Team-8",
     },
     {
@@ -23,7 +24,7 @@ export default function Projects() {
       title: "Soccer Neural Network",
       description: "Developed a neural network in Python to create predict the positions of soccer players based on the player’s statistics, such as goals scored and passes completed",
       technologies: ["Python", "Numpy", "Pandas"],
-      image: "/images/soccer.jpg",
+      image: config.basePath + "/images/soccer.jpg",
       github: "https://github.com/VishVarm/FootballNeuralNetwork",
     }
   ];

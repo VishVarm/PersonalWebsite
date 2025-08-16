@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 
+const config = require('../../next.config.js');
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,10 +19,10 @@ export const metadata: Metadata = {
   description: "Welcome to my personal website - About, Projects, Blog, and Games",
   icons: {
     icon: [
-      { url: '/favicon.svg?v=2', type: 'image/svg+xml' },
+      { url: config.basePath + '/favicon.svg?v=2', type: 'image/svg+xml' },
     ],
-    shortcut: '/favicon.svg?v=2',
-    apple: '/favicon.svg?v=2',
+    shortcut: config.basePath + '/favicon.svg?v=2',
+    apple: config.basePath + '/favicon.svg?v=2',
   },
 };
 

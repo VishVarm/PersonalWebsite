@@ -2,20 +2,22 @@
 
 import Link from 'next/link';
 
+const config = require('../../../next.config.js');
+
 export default function Games() {
   const games = [
                     {
                   id: 1,
                   title: "Memory Match",
                   description: "Test your memory by matching pairs of cards. Find all pairs to complete the game!",
-                  thumbnail: "/images/memorymatch.png",
+                  thumbnail: config.basePath + "/images/memorymatch.png",
                   playUrl: "/games/memory-match"
                 },
                 {
                   id: 2,
                   title: "10 Queens Puzzle",
                   description: "Place 10 queens on a 10x10 board following chess rules and colored section constraints. A challenging logic puzzle!",
-                  thumbnail: "/images/queen.png",
+                  thumbnail: config.basePath + "/images/queen.png",
                   playUrl: "/games/ten-queens-puzzle"
                 }
   ];

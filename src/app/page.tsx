@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+const config = require('../../next.config.js');
 export default function Home() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -8,7 +9,7 @@ export default function Home() {
         <div className="mb-8">
           <div className="w-40 h-40 rounded-full mx-auto mb-8 overflow-hidden border-4 border-white shadow-xl">
             <Image
-              src="/images/profile-picture.jpeg"
+              src= {`${config.basePath}/images/profile-picture.jpeg`}
               alt="Vishnu Varma Profile Picture"
               width={160}
               height={160}
