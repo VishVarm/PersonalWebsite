@@ -1,37 +1,48 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 
-export default function MemoryMatchGame() {
-  const [cards, setCards] = useState<Array<{ id: number; value: string; isFlipped: boolean; isMatched: boolean }>>([]);
+interface Card {
+  id: number;
+  value: string;
+  isFlipped: boolean;
+  isMatched: boolean;
+}
+
+export default function MemoryMatch() {
+  const [cards, setCards] = useState<Card[]>([]);
   const [flippedCards, setFlippedCards] = useState<number[]>([]);
   const [moves, setMoves] = useState(0);
   const [gameWon, setGameWon] = useState(false);
 
-  const cardValues = ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼'];
-
-  useEffect(() => {
-    initializeGame();
-  }, []);
-
-  const initializeGame = () => {
-    const gameCards = [...cardValues, ...cardValues]
-      .sort(() => Math.random() - 0.5)
-      .map((value, index) => ({
-        id: index,
-        value,
-        isFlipped: false,
-        isMatched: false,
-      }));
+  const initializeGame = useCallback(() => {
+    const symbols = ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼'];
+    const gameCards = [...symbols, ...symbols].map((symbol, index) => ({
+      id: index,
+      value: symbol,
+      isFlipped: false,
+      isMatched: false,
+    }));
+    
+    // Shuffle cards
+    for (let i = gameCards.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [gameCards[i], gameCards[j]] = [gameCards[j], gameCards[i]];
+    }
+    
     setCards(gameCards);
     setFlippedCards([]);
     setMoves(0);
     setGameWon(false);
-  };
+  }, []);
+
+  useEffect(() => {
+    initializeGame();
+  }, [initializeGame]);
 
   const handleCardClick = (cardId: number) => {
-    if (flippedCards.length === 2 || cards[cardId].isFlipped || cards[cardId].isMatched) {
+    if (flippedCards.length === 2 || cards[cardId].isMatched || cards[cardId].isFlipped) {
       return;
     }
 
@@ -131,7 +142,7 @@ export default function MemoryMatchGame() {
         <div className="text-center mb-8">
           <div className="bg-green-50 border border-green-200 rounded-lg p-6">
             <h2 className="text-2xl font-bold text-green-900 mb-2">🎉 Congratulations! 🎉</h2>
-            <p className="text-green-800 mb-4">You've completed the game in {moves} moves!</p>
+            <p className="text-green-800 mb-4">You&apos;ve completed the game in {moves} moves!</p>
             <button
               onClick={initializeGame}
               className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"

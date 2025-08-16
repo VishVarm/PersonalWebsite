@@ -34,7 +34,7 @@ export default function Blog() {
       <div className="text-center mb-12">
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6">
           <h2 className="text-lg font-semibold text-gray-900 mb-4">Follow My Journey</h2>
-          <p className="text-gray-600 mb-4">Check out what I'm reading and watching</p>
+                                <p className="text-gray-600 mb-4">Check out what I&apos;m reading and watching</p>
           <div className="flex justify-center space-x-6">
             <a
               href="https://www.goodreads.com/user/show/59864701-vishnu-varma"
