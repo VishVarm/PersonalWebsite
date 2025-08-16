@@ -2,14 +2,21 @@
 
 import Link from 'next/link';
 
+interface BlogPost {
+  id: number;
+  title: string;
+  date: string;
+  slug: string;
+}
+
 export default function Blog() {
-  const blogPosts = [
-    // {
-    //   id: 1,
-    //   title: "Getting Started with Next.js 14 and App Router",
-    //   date: "2024-01-15",
-    //   slug: "getting-started-nextjs-14-app-router"
-    // }
+  const blogPosts: BlogPost[] = [
+    {
+      id: 1,
+      title: "Coming soon",
+      date: "2025-08-15",
+      slug: "Coming soon"
+    }
   ];
 
   const formatDate = (dateString: string) => {
@@ -34,7 +41,7 @@ export default function Blog() {
       <div className="text-center mb-12">
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6">
           <h2 className="text-lg font-semibold text-gray-900 mb-4">Follow My Journey</h2>
-                                <p className="text-gray-600 mb-4">Check out what I&apos;m reading and watching</p>
+          <p className="text-gray-600 mb-4">Check out what I&apos;m reading and watching</p>
           <div className="flex justify-center space-x-6">
             <a
               href="https://www.goodreads.com/user/show/59864701-vishnu-varma"
@@ -69,8 +76,8 @@ export default function Blog() {
         </div>
         <div className="divide-y divide-gray-200">
           {blogPosts.map((post) => (
-            <Link 
-              key={post.id} 
+            <Link
+              key={post.id}
               href={`/blog/${post.slug}`}
               className="block hover:bg-gray-50 transition-colors"
             >
