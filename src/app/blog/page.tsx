@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 export default function Blog() {
   const blogPosts = [
-    {
-      id: 1,
-      title: "Getting Started with Next.js 14 and App Router",
-      date: "2024-01-15",
-      slug: "getting-started-nextjs-14-app-router"
-    }
+    // {
+    //   id: 1,
+    //   title: "Getting Started with Next.js 14 and App Router",
+    //   date: "2024-01-15",
+    //   slug: "getting-started-nextjs-14-app-router"
+    // }
   ];
 
   const formatDate = (dateString: string) => {
