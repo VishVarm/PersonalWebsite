@@ -34,7 +34,7 @@ export default function Projects() {
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">My Projects</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Here are some of the projects I've worked on. Each one represents a unique challenge 
+          Here are some of the projects I&apos;ve worked on. Each one represents a unique challenge 
           and learning experience in my journey as a developer.
         </p>
       </div>

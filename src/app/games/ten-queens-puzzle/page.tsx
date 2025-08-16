@@ -330,7 +330,7 @@ export default function TenQueensPuzzle() {
           <p>• Only 1 queen per row and column</p>
           <p>• Queens cannot be diagonally adjacent</p>
           <p>• Only 1 queen per colored section</p>
-          <p>• Click any square to place an 'X', click 'X' to place a queen</p>
+          <p>• Click any square to place an &apos;X&apos;, click &apos;X&apos; to place a queen</p>
           <p>• Click a queen to remove it</p>
           <p>• Conflicting queens show a red ! instead of 👑</p>
           <p>• Place 10 non-conflicting queens to win!</p>
@@ -403,7 +403,7 @@ export default function TenQueensPuzzle() {
         <div className="text-center mb-8">
           <div className="bg-green-50 border border-green-200 rounded-lg p-6">
             <h2 className="text-2xl font-bold text-green-900 mb-2">🎉 Congratulations! 🎉</h2>
-            <p className="text-green-800 mb-4">You've solved the 10 Queens puzzle!</p>
+            <p className="text-green-800 mb-4">You&apos;ve solved the 10 Queens puzzle!</p>
             <button
               onClick={() => window.location.reload()}
               className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"

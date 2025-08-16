@@ -17,11 +17,10 @@ export default function Home() {
             />
           </div>
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            Hi, I'm <span className="text-blue-600">Vishnu Varma</span>
+            Hi, I&apos;m <span className="text-blue-600">Vishnu Varma</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Welcome to my personal website! I'm a passionate developer who loves creating 
-            innovative solutions and sharing knowledge through writing and interactive experiences.
+            Welcome to my personal website!
           </p>
         </div>
         <div className="flex justify-center space-x-4">
@@ -44,27 +43,21 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">About Me</h2>
         <div className="max-w-3xl mx-auto">
           <p className="text-lg text-gray-600 mb-6">
-            I'm a software developer with a passion for creating user-friendly applications 
-            and solving complex problems. With experience in modern web technologies, 
-            I enjoy building everything from small business sites to rich interactive web applications.
+            I&apos;m a software developer with a passion for creating user-friendly applications 
+            and solving complex problems.
           </p>
           <p className="text-lg text-gray-600 mb-6">
-            When I'm not coding, you can find me exploring new technologies, contributing 
-            to open-source projects, or sharing my knowledge through blog posts and tutorials.
-          </p>
-          <p className="text-lg text-gray-600">
-            I believe in continuous learning and staying up-to-date with the latest 
-            industry trends and best practices.
+            Over the past summer, I worked at Meta as a software engineer intern. Currently I&apos;m a senior at the Georgia Institute of Technology and am currently searching for new grad opportunities.
           </p>
         </div>
       </section>
 
       {/* Contact Section */}
       <section className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Let's Connect</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">Let&apos;s Connect</h2>
         <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-          I'm always interested in hearing about new opportunities and exciting projects. 
-          Feel free to reach out if you'd like to collaborate or just want to say hello!
+          I&apos;m always interested in hearing about new opportunitiess. 
+          Feel free to reach out if you&apos;d like to collaborate or just want to say hello!
         </p>
         <div className="flex justify-center space-x-6">
           <a href="mailto:vishvarm04@gmail.com" className="text-blue-600 hover:text-blue-700 font-medium">
