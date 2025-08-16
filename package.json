@@ -2,11 +2,13 @@
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
+  "description": "A personal website built with Next.js and TypeScript featuring About, Projects, Blog, and Games sections",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "react": "19.1.0",
