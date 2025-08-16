@@ -26,7 +26,7 @@ export default function Games() {
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Games & Interactive Projects</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Explore a collection of fun games and interactive projects I've built. 
+          Explore a collection of fun games and interactive projects I&apos;ve built. 
           Click on any game to start playing!
         </p>
       </div>
