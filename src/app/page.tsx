@@ -26,7 +26,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center space-x-4">
           <a 
-            href="/VishnuVarmaResume.pdf" 
+            href={`${config.basePath}/VishnuVarmaResume.pdf`}
             target="_blank" 
             rel="noopener noreferrer"
             className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center"
